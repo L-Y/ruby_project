@@ -1,0 +1,30 @@
+<title>article how</title>
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+<p>
+  <strong>ID:</strong>
+  <%= @article.id %>
+</p>
+<p>
+  <strong> Title:</strong>
+  <%= @article.title %>
+</p>
+<p>
+  <strong> Text:</strong>
+  <%= @article.text %>>
+</p>
+<p>
+  <strong> CreateAt:</strong>
+  <%= @article.created_at %>>
+</p>
+<p>
+  <strong> UpdateAT:</strong>
+  <%= @article.updated_at %>>
+</p>
+<h2>Comments</h2>
+<%= render @article.comments %>
+<hr>
+<h2> Add a comment</h2>
+<%= render 'comments/form' %>
+<%= link_to "Edit" ,edit_article_path%>
+<%= link_to "Back",articles_path %>
